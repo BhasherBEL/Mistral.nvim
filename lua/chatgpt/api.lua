@@ -269,7 +269,7 @@ function Api.setup()
     Api.COMPLETIONS_URL = ensureUrlProtocol(Api.OPENAI_API_HOST .. "/v1/completions")
     Api.CHAT_COMPLETIONS_URL = ensureUrlProtocol(Api.OPENAI_API_HOST .. "/v1/chat/completions")
     Api.EDITS_URL = ensureUrlProtocol(Api.OPENAI_API_HOST .. "/v1/edits")
-  end, "api.openai.com")
+  end, "api.mistral.ai")
 
   loadApiKey("OPENAI_API_KEY", "OPENAI_API_KEY", "api_key_cmd", function(value)
     Api.OPENAI_API_KEY = value
