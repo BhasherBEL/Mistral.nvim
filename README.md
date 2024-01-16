@@ -6,6 +6,8 @@
 `ChatGPT` is a Neovim plugin that allows you to effortlessly utilize the OpenAI ChatGPT API,
 empowering you to generate natural language responses from OpenAI's ChatGPT directly within the editor in response to your inquiries.
 
+!!!!!!!!!!! I simply changed the API link to point to Mistral AI, as well as config to have the correct model !!!!!!!!!!!!!!!!!!!!!!!!
+
 ![preview image](https://github.com/jackMort/ChatGPT.nvim/blob/media/preview-2.png?raw=true)
 
 ## Features
