@@ -152,10 +152,11 @@ Api.handle_response = vim.schedule_wrap(function(response, exit_code, cb)
   elseif json.error then
     cb("// API ERROR: " .. json.error.message)
   else
-    local message = json.choices[1].message
+    cb("json: " .. json)
+    local message = json.messages[0].content
     if message ~= nil then
       local message_response
-      local first_message = json.choices[1].message
+      local first_message = json.messages[0].content
       if first_message.function_call then
         message_response = vim.fn.json_decode(first_message.function_call.arguments)
       else
@@ -167,7 +168,7 @@ Api.handle_response = vim.schedule_wrap(function(response, exit_code, cb)
         cb("...")
       end
     else
-      local response_text = json.choices[1].text
+      local response_text = json.messages[0].content
       if type(response_text) == "string" and response_text ~= "" then
         cb(response_text, json.usage)
       else
